@@ -9,7 +9,7 @@ def index(request):
   return render(request, "polls/index.html", { latest_question_list: latest_question_list })
   
 def detail(request, question_id):
-  question = Question.objects.filter(pk=question_id)
+  question = Question.objects.get(pk=question_id)
   print(question.question_id)
   print("==============")
   print(question.question_text)
