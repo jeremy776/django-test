@@ -10,9 +10,9 @@ def index(request):
   
 def detail(request, question_id):
   question = Question.objects.filter(pk=question_id)
-  print(question)
+  print(question.question_id)
   print("==============")
-  print(question_id)
+  print(question.question_text)
   return render(request, "polls/detail.html", { question: question })
   
 def results(request, question_id):
