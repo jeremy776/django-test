@@ -28,7 +28,7 @@ def vote(request, question_id):
     raise Http404("tidak ada")
   
   try:
-    selected_choice = question.choice_set.get(pk=request, POTS("choice"))
+    selected_choice = question.choice_set.get(pk=request, POTS["choice"])
   except Choice.DoesNotExist:
     return render(request, 'polls/detail.html', {
       'question': question,
