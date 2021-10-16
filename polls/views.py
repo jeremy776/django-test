@@ -12,7 +12,7 @@ def index(request):
   return render(request, "polls/index.html", context)
   
 def detail(request, question_id):
-  question = Question.objects.filter(id=question_id)
+  question = Question.objects.filter(pk=question_id)
   print(question)
   print("==============")
   print(question_id)
