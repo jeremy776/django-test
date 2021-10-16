@@ -1,7 +1,7 @@
 from django.http import HttpResponse, Http404, HttpResponseRedirect
 from django.shortcuts import render
 from django.urls import reverse
-from .models import Question
+from .models import Question, Choice
 
 # Create your views here.
 
