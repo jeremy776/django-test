@@ -24,7 +24,7 @@
   <ul>
     {% for data in list_question %}
     li><a href="/polls/{{ data.id }}">{{ data.question_text }}</a>
-    <% endfor %>
+    {% endfor %}
   </ul>
   {% else %}
   <p>Belum ada pertanyaan</p>
