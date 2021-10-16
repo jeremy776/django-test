@@ -10,7 +10,7 @@ def index(request):
   
 def detail(request, question_id):
   question = Question.objects.get(pk=question_id)
-  print(question.question_id)
+  print(question.id)
   print("==============")
   print(question.question_text)
   return render(request, "polls/detail.html", { question: question })
