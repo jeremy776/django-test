@@ -23,7 +23,7 @@
   <h1>List Question</h1>
   <ul>
     {% for data in list_question %}
-    li><a href="/polls/{{ data.id }}">{{ data.question_text }}</a>
+    <li><a href="/polls/{{ data.id }}">{{ data.question_text }}</a>
     {% endfor %}
   </ul>
   {% else %}
