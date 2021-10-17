@@ -26,7 +26,6 @@ def vote(request, question_id):
     question = Question.objects.get(pk=question_id)
   except Question.DoesNotExist:
     raise Http404("tidak ada")
-  
   try:
     selected_choice = question.choice_set.get(pk=request.POTS["choice"])
   except Choice.DoesNotExist:
